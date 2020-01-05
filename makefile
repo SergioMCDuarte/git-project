@@ -5,4 +5,5 @@ README.md: guessinggame.sh
 	echo "# The Guessing Game" > README.md
 	date >> README.md
 	echo "<br></br>" >> README.md
+	echo "Number of lines: " >> README.md
 	cat guessinggame.sh | wc -l >> README.md
