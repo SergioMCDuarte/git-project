@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-n_files=$(ls | wc -l)
+echo "Welcome to The Guessing Game!"
+echo ""
+echo "How many files are in the current directory?"
+echo ""
+echo "--------------------------------------------"
+echo ""
+
+n_files=$(ls | wc -l) 
 correct_answer=false
 
 function eval_nfiles {
@@ -15,10 +22,7 @@ function eval_nfiles {
 }
 
 while [[ $correct_answer = false ]]; do
-    
-    echo "Guess the number of files in the current directory: "
-    
+    echo "Enter your guess: "
     read response
-    
     eval_nfiles $n_files $response
 done
